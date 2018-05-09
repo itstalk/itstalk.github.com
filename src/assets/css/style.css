@@ -132,6 +132,7 @@ p {
 .header {
     height: 80px;
     background-color: rgba(0,0,0,.15)!important;
+    position: absolute;
     border-bottom: 1px solid rgba(255,255,255,.15);
 }
 

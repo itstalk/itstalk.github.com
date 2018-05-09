@@ -108,8 +108,8 @@ var App = function () {
 	
 	return {
 		init: function () {
-		    handleHomeContentHeight();
-		    handlePageContainerShow();
+		  //  handleHomeContentHeight();
+		   // handlePageContainerShow();
 		   // handlePageScrollContentAnimation();
             sendMail();
 		}

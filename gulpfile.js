@@ -55,9 +55,9 @@ gulp.task('html', function() {
 
 
 gulp.task('watch', function () {
-  gulp.watch(['index.html'], ['html']);
-  gulp.watch(['assets/js/*.js'], ['js']);
-  gulp.watch(['assets/css/*.css'], ['css']);
+  gulp.watch(['src/index.html'], ['html']);
+  gulp.watch(['src/assets/js/.js'], ['js']);
+  gulp.watch(['src/assets/css/*.css'], ['css']);
 });
 
 gulp.task('default', [ 'connect', 'html', 'css', 'js', 'copy', 'watch']);
