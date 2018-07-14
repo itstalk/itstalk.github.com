@@ -3295,7 +3295,7 @@ input, select, textarea {
 			}
 
 				#nav.alt ul li a {
-					font-size: 0.9em;
+					font-size: 1em;
 				}
 
 		@media screen and (max-width: 736px) {
@@ -3315,7 +3315,7 @@ input, select, textarea {
 	#main {
 		background-color: #ffffff;
 		color: #636363;
-		border-radius: 0.25em;
+		/*border-radius: 0.25em;*/
 	}
 
 		#main input, #main select, #main textarea {
@@ -3742,15 +3742,16 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		width: 64em;
-		max-width: calc(100% - 4em);
+		/*width: 64em;*/
+		width: 100%;
+		/*max-width: calc(100% - 4em);*/
 		margin: 0 auto;
 	}
 
 		@media screen and (max-width: 480px) {
 
 			#wrapper {
-				max-width: calc(100% - 2em);
+				/*max-width: calc(100% - 2em);*/
 			}
 
 		}
@@ -3758,7 +3759,7 @@ input, select, textarea {
 		@media screen and (max-width: 360px) {
 
 			#wrapper {
-				max-width: 100%;
+				/*max-width: 100%;*/
 			}
 
 		}
