@@ -206,7 +206,7 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 2.5em;
+		font-size: 3.5em;
 		line-height: 1.2;
 	}
 
@@ -3204,7 +3204,7 @@ input, select, textarea {
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
-		text-align: center;
+		text-align: right;
 	}
 
 		#nav input, #nav select, #nav textarea {
