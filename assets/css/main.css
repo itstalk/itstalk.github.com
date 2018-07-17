@@ -3197,15 +3197,26 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		position: absolute;
-		width: 64em;
-		max-width: calc(100% - 4em);
+		width: 100%;
 		padding: 1em;
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
 		cursor: default;
-		text-align: right;
 	}
+
+		#logotipo {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			height: 2em;
+			border-bottom: none;
+		}
+			
+			#logotipo img {
+				height: 100%;
+			}
 
 		#nav input, #nav select, #nav textarea {
 			color: #636363;
@@ -3281,13 +3292,21 @@ input, select, textarea {
 					}
 
 		#nav.alt {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			position: fixed;
 			top: 0;
-			padding: 0.5em 1em;
+			padding: 0.75em 5em;
 			background-color: rgba(247, 247, 247, 0.95);
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			z-index: 10000;
+			border-bottom: solid 1px;
+			border-color: #dddddd;
 		}
 
 			#nav.alt ul li {
@@ -3298,16 +3317,53 @@ input, select, textarea {
 					font-size: 1em;
 				}
 
-		@media screen and (max-width: 736px) {
-
-			#nav {
-				display: none;
+			#nav .button {
+				background-color: transparent;
+				box-shadow: inset 0 0 0 1px #dddddd;
+				color: #636363 !important;
 			}
-
-				#nav + #main {
-					padding-top: 0;
+				#nav .button:hover {
+					background-color: rgba(222, 222, 222, 0.25);
 				}
 
+		@media screen and (max-width: 1280px) {
+
+			#nav.alt {
+				padding: 1em 4em ;
+			}
+			
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#nav.alt {
+				padding: 0.5em 3em ;
+			}
+			
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#nav.alt {
+				padding: 0.5em 2em ;
+			}
+			
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#nav.alt {
+				padding: 0.5em 1.5em ;
+			}
+			
+		}
+
+		@media screen and (max-width: 360px) {
+
+			#nav.alt {
+				padding: 0.5em 1em ;
+			}
+			
 		}
 
 /* Main */
@@ -3315,7 +3371,6 @@ input, select, textarea {
 	#main {
 		background-color: #ffffff;
 		color: #636363;
-		/*border-radius: 0.25em;*/
 	}
 
 		#main input, #main select, #main textarea {
@@ -3742,24 +3797,5 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		/*width: 64em;*/
 		width: 100%;
-		/*max-width: calc(100% - 4em);*/
-		margin: 0 auto;
 	}
-
-		@media screen and (max-width: 480px) {
-
-			#wrapper {
-				/*max-width: calc(100% - 2em);*/
-			}
-
-		}
-
-		@media screen and (max-width: 360px) {
-
-			#wrapper {
-				/*max-width: 100%;*/
-			}
-
-		}

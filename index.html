@@ -15,8 +15,8 @@
 		<meta property="og:locale" 			content="pt_BR"/>
     	<meta property="og:type" 			content="website" />
     	<meta property="og:title" 			content="itStalk: Muito mais networking."/>
-    	<meta property="og:url" 			content="http://itstalk.me" />
-    	<meta property='og:image' 			content='http://itstalk.me/assets/img/opengraph.jpg'/>
+    	<meta property="og:url" 			content="https://itstalk.me" />
+    	<meta property='og:image' 			content='https://itstalk.me/assets/img/opengraph.jpg'/>
     	<meta property="og:image:type"		content="image/jpeg">
     	<meta property="og:image:width" 	content="800"> 
     	<meta property="og:image:height" 	content="600"> 
@@ -32,11 +32,14 @@
 			<div id="wrapper">
 
 				<!-- Nav -->
-					<nav id="nav">
+					<nav id="nav" class="alt">
+						<a href="#" id="logotipo"><img src="images/logo/itStalk-Logo-Cinza-Colorido.svg" alt="itStalk"/></a>
+						
 						<ul>
-							<li><a href="#intro">Como funciona</a></li>
-							<li><a href="#footer">Contato</a></li>
-							<li><a href="#cta" >Login</a></li>
+							<li><a href="#">Como funciona</a></li>
+							<li><a href="#">Sobre nós</a></li>
+							<li><a href="#">Contato</a></li>
+							<li><a href="#" class="button">Acessar</a></li>
 						</ul>
 					</nav>
 
@@ -48,9 +51,9 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h1 class="header.alt">Torne o networking muito mais simples com a nossa ferramenta.</h1>
+											<h1 class="header">Torne o networking muito mais simples com a nossa ferramenta.</h1>
 										</header>
-										<p><h2> Gere mais valor para os seus participantes fornecendo as melhores conexões possíveis.</h2></p>
+										<h2> Gere mais valor para os seus participantes fornecendo as melhores conexões possíveis.</h2>
 										<ul class="actions">
 											<li><a href="https://itstalk-client.herokuapp.com/evento/acessar-com-link" class="button primary">Crie um evento</a></li>
 										</ul>
@@ -77,8 +80,8 @@
 									</li>
 									<li>
 										<span class="icon major style5 fa-diamond"></span>
-										<h3>Insights</h3>
-										<p>Descubra o perfil dos seus usuários e obtenha insights sobre o seu evento em tempo real.</p>
+										<h3>Conheça o seu público</h3>
+										<p>Colete insights em tempo real sobre os participantes do evento.</p>
 									</li>
 								</ul>
 							
@@ -87,9 +90,8 @@
 						<!-- Get Started -->
 							<section id="cta" class="main special">
 								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<h2>Experimente grátis</h2>
+									<p>Teste o uso da plataforma agora mesmo: em 2 duas etapas você já consegue visualizar nossa solução na prática.</p>
 								</header>
 								<footer class="major">
 									<ul class="actions special">
@@ -105,18 +107,18 @@
 					<footer id="footer">
 						<section>
 							<h2>Carreiras</h2>
-							<p>Itstalk é uma startup que fornece um software para facilitar o networking com foco em eventos. Estamos em pleno desenvolvimento com muita vontade de crescimento e desejo de causar impacto. Venha fazer parte da nossa equipe.</p>
+							<p>itStalk é uma startup que fornece um software para facilitar o networking com foco em eventos. Estamos em pleno desenvolvimento com muita vontade de crescimento e desejo de causar impacto. Venha fazer parte da nossa equipe.</p>
 							<ul class="actions">
-								<li><a href="generic.html" class="button">Saiba mais</a></li>
+								<li><a href="#" class="button">Saiba mais</a></li>
 							</ul>
 						</section>
 						<section>
 							<h2>Endereço</h2>
 							<dl class="alt">
 								<dt>Endereço</dt>
-								<dd>301 Rua Avaí &bull; Porto Alegre, RS &bull; BR</dd>
+								<dd>Rua Avaí, 301 &bull; Porto Alegre, RS &bull; BR</dd>
 								<dt>Fone</dt>
-								<dd>(051) 9 9422-6539</dd>
+								<dd>(51) 99422-6539</dd>
 								<dt>Email</dt>
 								<dd><a href="#">lucas@itstalk.me</a></dd>
 							</dl>
@@ -134,12 +136,20 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		
+		<!-- Tawk.to -->
+			<script type="text/javascript">
+			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+				s1.async=true;
+				s1.src='https://embed.tawk.to/5b43ad1e6d961556373d8c8e/default';
+				s1.charset='UTF-8';
+				s1.setAttribute('crossorigin','*');
+				s0.parentNode.insertBefore(s1,s0);
+			})();
+			</script>
 
 	</body>
 </html>
