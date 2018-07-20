@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Roboto+Slab:700";
 
 /*
 	Stellar by HTML5 UP
@@ -3299,7 +3299,7 @@ input, select, textarea {
             z-index: 9000;
             top: 49px;
             right: 0;
-            padding: 1.5em 2em 1.5em 1.5em;
+            padding: 1.5em 0em;
             border-left: solid 1px;
             border-bottom: solid 1px;
             border-color: #dddddd;
@@ -3322,7 +3322,10 @@ input, select, textarea {
                 list-style-type: none;
             }
                 #nav-dropdown-wrapper > ul > li {
-                    padding: 0;
+                    padding: 0 2em 0em 1.5em;
+                }
+                #nav-dropdown-wrapper > ul > li.acessar {
+                    font-weight: 800;
                 }
                 #nav-dropdown-wrapper > ul > li:not(:last-child) {
                     margin-bottom: 1em;
@@ -3449,6 +3452,10 @@ input, select, textarea {
 		#main strong, #main b {
 			color: #636363;
 		}
+        
+        #main h1 {
+            font-family: 'Roboto Slab', serif;
+        }
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
 			color: #636363;
@@ -3510,9 +3517,11 @@ input, select, textarea {
 			#main input[type="button"].primary,
 			#main button.primary,
 			#main .button.primary {
-				background-color: #8cc9f0;
+				background-color: #da5e8d;
 				color: #ffffff !important;
 				box-shadow: none;
+                font-weight: 500;
+                text-transform: uppercase;
 			}
 
 				#main input[type="submit"].primary:hover,
