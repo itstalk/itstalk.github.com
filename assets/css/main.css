@@ -3786,6 +3786,71 @@ input, select, textarea {
 						}
 
 		}
+        
+    .main.titulo h2 {
+        font-family: 'Roboto Slab', serif;
+    }
+    .main.titulo h2::after {
+        background-image: none !important;
+        background-color: transparent !important;
+    }
+        
+    .pontos-alternados {
+        max-width: 80em;
+        margin: 0 auto;
+    }        
+        
+    .pontos-alternados > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+        .pontos-alternados > div > h2 {
+            display: flex;
+            width: auto;
+        }
+        .pontos-alternados > div > img {
+            width: 25%;
+            max-width: 200px;
+        }
+    .pontos-alternados > div:not(last-child) {
+        margin-bottom: 3em;
+    }
+    
+    .pontos-alternados 
+    
+    @media screen and (max-width: 700px) {
+        
+        .pontos-alternados > div {
+            flex-direction: column;
+        }
+            .pontos-alternados > div > h2 {
+                width: 100%;
+                font-size: 1.3em;
+                margin-bottom: 2em;
+            }
+            .pontos-alternados > div > img {
+                margin-bottom: 2em;
+                width: 50%;
+            }
+
+    }
+    
+    @media screen and (min-width: 701px) {
+        
+        .pontos-alternados > div:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+    
+        .pontos-alternados > div:nth-child(odd) > h2 {
+            margin-right: 3em;
+        }
+        .pontos-alternados > div:nth-child(even) > img {
+            margin-right: 3em;
+        }
+        
+    }
+    
 
 /* Footer */
 
