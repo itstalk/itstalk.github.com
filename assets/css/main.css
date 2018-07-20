@@ -3817,8 +3817,6 @@ input, select, textarea {
         margin-bottom: 3em;
     }
     
-    .pontos-alternados 
-    
     @media screen and (max-width: 700px) {
         
         .pontos-alternados > div {
@@ -3840,6 +3838,9 @@ input, select, textarea {
         
         .pontos-alternados > div:nth-child(odd) {
             flex-direction: row-reverse;
+        }
+        .pontos-alternados > div:nth-child(even) {
+            flex-direction: row;
         }
     
         .pontos-alternados > div:nth-child(odd) > h2 {
