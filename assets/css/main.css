@@ -3291,6 +3291,46 @@ input, select, textarea {
 						background-color: #ffffff;
 						box-shadow: none;
 					}
+                    
+        #nav-dropdown-wrapper {
+            display: none;
+            position: fixed;
+            background-color: rgba(247, 247, 247, 0.95);
+            z-index: 9000;
+            top: 49px;
+            right: 0;
+            padding: 1.5em 2em 1.5em 1.5em;
+            border-left: solid 1px;
+            border-bottom: solid 1px;
+            border-color: #dddddd;
+            transition: opacity 300ms 100ms, transform 500ms ease-in-out 0s;
+        }
+                    
+        #nav-dropdown-wrapper.hidden {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        
+        #nav-dropdown-wrapper.visible {
+            opacity: 100;
+            transform: translateY(0px);
+        }
+        
+            #nav-dropdown-wrapper > ul {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+                #nav-dropdown-wrapper > ul > li {
+                    padding: 0;
+                }
+                #nav-dropdown-wrapper > ul > li:not(:last-child) {
+                    margin-bottom: 1em;
+                }
+                    #nav-dropdown-wrapper > ul > li > a {
+                        border-bottom: none;
+                        color: #636363;
+                    }
 
 		#nav.alt {
 			display: -moz-flex;
@@ -3326,6 +3366,11 @@ input, select, textarea {
 				#nav .button:hover {
 					background-color: rgba(222, 222, 222, 0.25);
 				}
+                
+            #nav > .menu {
+                display: none;
+                border-bottom: none;
+            }
 
 		@media screen and (max-width: 1280px) {
 
@@ -3342,7 +3387,7 @@ input, select, textarea {
 			}
 			
 		}
-
+        
 		@media screen and (max-width: 736px) {
 
 			#nav.alt {
@@ -3351,6 +3396,25 @@ input, select, textarea {
 			
 		}
 
+        @media screen and (max-width: 650px) {
+            
+            #nav.alt {
+                height: 49px;
+            }
+            
+            #nav.alt > .principais {
+                display: none;
+            }
+            
+            #nav.alt > .menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5em 0.5em 0.5em 2em;
+            }
+            
+        }
+        
 		@media screen and (max-width: 480px) {
 
 			#nav.alt {

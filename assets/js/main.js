@@ -20,11 +20,35 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 
-	// Play initial animations on page load.
+	
 		$window.on('load', function() {
+            
+            // Play initial animations on page load.
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+            
 		});
 
 })(jQuery);
+
+// Funcionalidade do dropdown do menu no cabeçalho da página
+$(document).ready(function() {
+    $( "#nav-dropdown-menu" ).click(function() {
+        
+        var $wrapper = $( "#nav-dropdown-wrapper" );
+        
+        if ($wrapper.hasClass( "hidden" )) {
+            $wrapper.css( "display", "block" );
+            
+        } else {
+            setTimeout(function() {
+                $wrapper.css( "display", "none" );
+            }, 550);
+        }
+        
+        setTimeout(function() {
+            $wrapper.toggleClass( "hidden visible" );
+        }, 20);
+    });
+});
