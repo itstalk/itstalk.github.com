@@ -2002,6 +2002,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+    input[type="tel"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -2021,6 +2022,7 @@ input, select, textarea {
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+        input[type="tel"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -2046,6 +2048,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+    input[type="tel"],
 	select {
 		height: 2.75em;
 	}
@@ -2141,6 +2144,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+    input[type="tel"],
 	select,
 	textarea {
 		background-color: rgba(255, 255, 255, 0.075);
@@ -2150,6 +2154,7 @@ input, select, textarea {
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+        input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #8cc9f0;
@@ -2798,6 +2803,10 @@ input, select, textarea {
 			margin-top: 3em;
 			padding: 0;
 		}
+        .features img {
+			width: 45%;
+            padding-bottom: 1.5em;
+        }
 
 			.features li:nth-child(1), .features li:nth-child(2), .features li:nth-child(3) {
 				margin-top: 0;
@@ -3186,6 +3195,48 @@ input, select, textarea {
 			-ms-transform: scale(0.8) rotate(-30deg);
 			transform: scale(0.8) rotate(-30deg);
 		}
+        
+/* Modal de formulário de contato */
+    #modal-contato-wrapper {
+        position: fixed;
+        display: none;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 11000;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 300ms 100ms;
+    }
+    #modal-contato-wrapper.hidden {
+        opacity: 0;
+    }
+    #modal-contato-wrapper.visible {
+        opacity: 100;
+    }
+        #modal-contato-inner {
+            z-index:12000;
+            padding: 3em;
+            background-color: white;
+            border-radius: 16px;
+            border: solid 1px #dddddd;
+            width: 40em;
+            transition: transform 500ms ease-in-out 0s;
+        }
+        #modal-contato-wrapper.hidden #modal-contato-inner {
+            transform: translateY(-30px);
+        }
+        #modal-contato-wrapper.visible #modal-contato-inner {
+            opacity: 100;
+            transform: translateY(0px);
+        }
+            #modal-contato-inner form {
+                margin-bottom: 0;
+            }
+    
+    
 
 /* Nav */
 
@@ -3305,7 +3356,7 @@ input, select, textarea {
             border-color: #dddddd;
             transition: opacity 300ms 100ms, transform 500ms ease-in-out 0s;
         }
-                    
+
         #nav-dropdown-wrapper.hidden {
             opacity: 0;
             transform: translateY(-30px);
@@ -3441,7 +3492,8 @@ input, select, textarea {
 		color: #636363;
 	}
 
-		#main input, #main select, #main textarea {
+		#main input, #main select, #main textarea,
+		.modal input, .modal select, .modal textarea {
 			color: #636363;
 		}
 
@@ -3457,7 +3509,7 @@ input, select, textarea {
             font-family: 'Roboto Slab', serif;
         }
 
-		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+		#main h1, #main h2, .modal h2, #main h3, #main h4, #main h5, #main h6 {
 			color: #636363;
 		}
 
@@ -3482,7 +3534,12 @@ input, select, textarea {
 		#main input[type="reset"],
 		#main input[type="button"],
 		#main button,
-		#main .button {
+		#main .button,
+        .modal input[type="submit"],
+		.modal input[type="reset"],
+		.modal input[type="button"],
+		.modal button,
+		.modal .button {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px #dddddd;
 			color: #636363 !important;
@@ -3492,7 +3549,12 @@ input, select, textarea {
 			#main input[type="reset"]:hover,
 			#main input[type="button"]:hover,
 			#main button:hover,
-			#main .button:hover {
+			#main .button:hover,
+            .modal input[type="submit"]:hover,
+			.modal input[type="reset"]:hover,
+			.modal input[type="button"]:hover,
+			.modal button:hover,
+			.modal .button:hover {
 				background-color: rgba(222, 222, 222, 0.25);
 			}
 
@@ -3500,7 +3562,12 @@ input, select, textarea {
 			#main input[type="reset"]:active,
 			#main input[type="button"]:active,
 			#main button:active,
-			#main .button:active {
+			#main .button:active,
+            .modal input[type="submit"]:active,
+			.modal input[type="reset"]:active,
+			.modal input[type="button"]:active,
+			.modal button:active,
+			.modal .button:active {
 				background-color: rgba(222, 222, 222, 0.5);
 			}
 
@@ -3508,7 +3575,12 @@ input, select, textarea {
 			#main input[type="reset"].icon:before,
 			#main input[type="button"].icon:before,
 			#main button.icon:before,
-			#main .button.icon:before {
+			#main .button.icon:before,
+            .modal input[type="submit"].icon:before,
+			.modal input[type="reset"].icon:before,
+			.modal input[type="button"].icon:before,
+			.modal button.icon:before,
+			.modal .button.icon:before {
 				color: rgba(99, 99, 99, 0.25);
 			}
 
@@ -3516,7 +3588,12 @@ input, select, textarea {
 			#main input[type="reset"].primary,
 			#main input[type="button"].primary,
 			#main button.primary,
-			#main .button.primary {
+			#main .button.primary,
+            .modal input[type="submit"].primary,
+			.modal input[type="reset"].primary,
+			.modal input[type="button"].primary,
+			.modal button.primary,
+			.modal .button.primary {
 				background-color: #da5e8d;
 				color: #ffffff !important;
 				box-shadow: none;
@@ -3528,7 +3605,12 @@ input, select, textarea {
 				#main input[type="reset"].primary:hover,
 				#main input[type="button"].primary:hover,
 				#main button.primary:hover,
-				#main .button.primary:hover {
+				#main .button.primary:hover,
+                .modal input[type="submit"].primary:hover,
+				.modal input[type="reset"].primary:hover,
+				.modal input[type="button"].primary:hover,
+				.modal button.primary:hover,
+				.modal .button.primary:hover {
 					background-color: #9acff2;
 				}
 
@@ -3536,7 +3618,12 @@ input, select, textarea {
 				#main input[type="reset"].primary:active,
 				#main input[type="button"].primary:active,
 				#main button.primary:active,
-				#main .button.primary:active {
+				#main .button.primary:active,
+                .modal input[type="submit"].primary:active,
+				.modal input[type="reset"].primary:active,
+				.modal input[type="button"].primary:active,
+				.modal button.primary:active,
+				.modal .button.primary:active {
 					background-color: #7ec3ee;
 				}
 
@@ -3544,7 +3631,12 @@ input, select, textarea {
 				#main input[type="reset"].primary.icon:before,
 				#main input[type="button"].primary.icon:before,
 				#main button.primary.icon:before,
-				#main .button.primary.icon:before {
+				#main .button.primary.icon:before,
+                .modal input[type="submit"].primary.icon:before,
+				.modal input[type="reset"].primary.icon:before,
+				.modal input[type="button"].primary.icon:before,
+				.modal button.primary.icon:before,
+				.modal .button.primary.icon:before {
 					color: #ffffff !important;
 				}
 
@@ -3555,8 +3647,15 @@ input, select, textarea {
 		#main input[type="text"],
 		#main input[type="password"],
 		#main input[type="email"],
+        #main input[type="tel"],
 		#main select,
-		#main textarea {
+		#main textarea,
+        .modal input[type="text"],
+		.modal input[type="password"],
+		.modal input[type="email"],
+        .modal input[type="tel"],
+		.modal select,
+		.modal textarea {
 			background-color: rgba(222, 222, 222, 0.25);
 			border-color: #dddddd;
 		}
@@ -3564,17 +3663,26 @@ input, select, textarea {
 			#main input[type="text"]:focus,
 			#main input[type="password"]:focus,
 			#main input[type="email"]:focus,
+            #main input[type="tel"]:focus,
 			#main select:focus,
-			#main textarea:focus {
+			#main textarea:focus,
+            .modal input[type="text"]:focus,
+			.modal input[type="password"]:focus,
+			.modal input[type="email"]:focus,
+            .modal input[type="tel"]:focus,
+			.modal select:focus,
+			.modal textarea:focus {
 				border-color: #8cc9f0;
 				box-shadow: 0 0 0 1px #8cc9f0;
 			}
 
-		#main select {
+		#main select,
+		.modal select {
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23dddddd' /%3E%3C/svg%3E");
 		}
 
-			#main select option {
+			#main select option,
+			.modal select option {
 				color: #636363;
 				background: #ffffff;
 			}
@@ -3603,23 +3711,28 @@ input, select, textarea {
 			box-shadow: 0 0 0 1px #8cc9f0;
 		}
 
-		#main ::-webkit-input-placeholder {
+		#main ::-webkit-input-placeholder,
+		.modal ::-webkit-input-placeholder {
 			color: rgba(99, 99, 99, 0.25) !important;
 		}
 
-		#main :-moz-placeholder {
+		#main :-moz-placeholder,
+		.modal :-moz-placeholder {
 			color: rgba(99, 99, 99, 0.25) !important;
 		}
 
-		#main ::-moz-placeholder {
+		#main ::-moz-placeholder,
+		.modal ::-moz-placeholder {
 			color: rgba(99, 99, 99, 0.25) !important;
 		}
 
-		#main :-ms-input-placeholder {
+		#main :-ms-input-placeholder,
+		.modal :-ms-input-placeholder {
 			color: rgba(99, 99, 99, 0.25) !important;
 		}
 
-		#main .formerize-placeholder {
+		#main .formerize-placeholder,
+		.modal .formerize-placeholder {
 			color: rgba(99, 99, 99, 0.25) !important;
 		}
 

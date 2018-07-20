@@ -35,7 +35,7 @@
                     <nav id="nav-dropdown-wrapper" class="hidden">
                         <ul class="principais">
                             <li><a href="como-funciona.html">Como funciona</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#" class="modal-contato-menu">Contato</a></li>
                             <li class="acessar"><a href="#">Acessar</a></li>
                         </ul>
                     </nav>
@@ -49,7 +49,7 @@
                         
                         <ul class="principais">
                             <li><a href="como-funciona.html">Como funciona</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#" class="modal-contato-menu">Contato</a></li>
                             <li><a href="#" class="button">Acessar</a></li>
                         </ul>
                     </nav>
@@ -80,19 +80,19 @@
                                 </header>
                                 <ul class="features">
                                     <li>
-                                        <span class="icon major style1 fa-code"></span>
-                                        <h3>Networking antes, durante e depois do evento</h3>
+                                        <img src="images/conversation2.svg" alt="" />
+                                        <h3>Potencialize o networking</h3>
                                         <p>Torne a experiência do seu evento contínua, permitindo que os participantes engajem entre eles a partir do aplicativo.</p>
                                     </li>
                                     <li>
-                                        <span class="icon major style3 fa-copy"></span>
+                                        <img src="images/confirm-schedule.svg" alt="" />
                                         <h3>Agenda interativa</h3>
-                                        <p>Os seus participantes poderão consultar toda a sua programação, incluindo os perfis de palestrantes e empresas, selecionando os itens do seu interesse e adicionando lembretes. As suas preferências ficarão salvas em uma agenda interativa e totalmente dinâmica.</p>
+                                        <p>Os participantes podem ver toda a programação e salvar suas preferências em uma agenda interativa.</p>
                                     </li>
                                     <li>
-                                        <span class="icon major style5 fa-diamond"></span>
+                                        <img src="images/viral-marketing.svg" alt="" />
                                         <h3>Conheça o seu público</h3>
-                                        <p>Colete insights em tempo real sobre os participantes do evento.</p>
+                                        <p>Descubra as preferências dos seus usuários, os eventos mais procurados por eles, suas avalilações e outros insights em tempo real.</p>
                                     </li>
                                 </ul>
 
@@ -102,7 +102,7 @@
                             <section id="cta" class="main special">
                                 <header class="major">
                                     <h2>Experimente grátis</h2>
-                                    <p>Teste o uso da plataforma agora mesmo: em 2 duas etapas você já consegue visualizar nossa solução na prática.</p>
+                                    <p>Teste o uso da plataforma agora mesmo: em duas etapas você já consegue visualizar nossa solução na prática.</p>
                                 </header>
                                 <footer class="major">
                                     <ul class="actions special">
@@ -124,14 +124,12 @@
                             </ul>
                         </section>
                         <section>
-                            <h2>Endereço</h2>
+                            <h2>Fale conosco</h2>
                             <dl class="alt">
-                                <dt>Endereço</dt>
-                                <dd>Rua Avaí, 301 &bull; Porto Alegre, RS &bull; BR</dd>
                                 <dt>Fone</dt>
                                 <dd>(51) 99422-6539</dd>
                                 <dt>Email</dt>
-                                <dd><a href="#">lucas@itstalk.me</a></dd>
+                                <dd><a href="#">contato@itstalk.me</a></dd>
                             </dl>
                             <ul class="icons">
                                 <li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
@@ -142,6 +140,35 @@
                         <p class="copyright">&copy; itStalk. Powered by: <a href="https://html5up.net">HTML5 UP</a>, <a href='https://br.freepik.com/vetores-gratis/reuniao-comercial-bem-sucedida-ou-entrevista-de-trabalho_1311606.htm'>Freepik</a> e <a href='https://www.flaticon.com'>Flaticon</a>.</p>
                     </footer>
 
+            </div>
+            
+        <!-- Modal: Formulário de contato -->
+            <div id="modal-contato-wrapper" class="modal hidden">
+                <div id="modal-contato-inner">
+                    <h2>Enviar mensagem</h2>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-4 col-12-xsmall">
+                                <input type="text" name="mensagem-autor" value="" placeholder="Nome" />
+                            </div>
+                            <div class="col-4 col-12-xsmall">
+                                <input type="email" name="mensagem-email" value="" placeholder="Email" />
+                            </div>
+                            <div class="col-4 col-12-xsmall">
+                                <input type="tel" name="mensagem-telefone" value="" placeholder="Telefone" />
+                            </div>
+                            <div class="col-12">
+                                <textarea name="demo-message" id="demo-message" placeholder="Escreva sua mensagem" rows="6"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Enviar Mensagem" class="primary confirmar" /></li>
+                                    <li><input type="reset" value="Cancelar" class="cancelar" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         <!-- Scripts -->

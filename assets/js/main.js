@@ -32,8 +32,9 @@
 
 })(jQuery);
 
-// Funcionalidade do dropdown do menu no cabeçalho da página
 $(document).ready(function() {
+    
+    // Funcionalidade do dropdown do menu no cabeçalho da página
     $( "#nav-dropdown-menu" ).click(function() {
         
         var $wrapper = $( "#nav-dropdown-wrapper" );
@@ -51,4 +52,25 @@ $(document).ready(function() {
             $wrapper.toggleClass( "hidden visible" );
         }, 20);
     });
+    
+    // Modal do formulário de contato
+    $( ".modal-contato-menu, #modal-contato-wrapper input.cancelar, #modal-contato-wrapper input.confirmar" ).click(function() {
+        
+        var $wrapper = $( "#modal-contato-wrapper" );
+        
+        if ($wrapper.hasClass( "hidden" )) {
+            $wrapper.css( "display", "flex" );
+            
+        } else {
+            setTimeout(function() {
+                $wrapper.css( "display", "none" );
+            }, 550);
+        }
+        
+        setTimeout(function() {
+            $wrapper.toggleClass( "hidden visible" );
+        }, 20);
+    });
+    
+    
 });

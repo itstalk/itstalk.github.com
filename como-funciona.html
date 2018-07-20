@@ -35,7 +35,7 @@
                     <nav id="nav-dropdown-wrapper" class="hidden">
                         <ul class="principais">
                             <li><a href="como-funciona.html">Como funciona</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#" class="modal-contato-menu">Contato</a></li>
                             <li class="acessar"><a href="#">Acessar</a></li>
                         </ul>
                     </nav>
@@ -49,7 +49,7 @@
                         
                         <ul class="principais">
                             <li><a href="como-funciona.html" class="active">Como funciona</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#" class="modal-contato-menu">Contato</a></li>
                             <li><a href="#" class="button">Acessar</a></li>
                         </ul>
                     </nav>
@@ -60,7 +60,7 @@
                         <!-- Get Started -->
                             <section class="main special titulo">
                                 <header class="major">
-                                    <h2>Simples e fácil de usar a plataforma</h2>
+                                    <h2>Simples e fácil de usar</h2>
                                     <p>ItStalk otimiza a comunicação e promove mais networking nos seus eventos.</p>
                                 </header>
                             </section>
@@ -79,12 +79,12 @@
 
                                 <div>
                                     <img src="images/conversation.svg" alt="">
-                                    <h2>Os ususário já podem ver quem estará no evnto, marcar encontros e, durante o evento, podem trocar cartões pela própria plataforma.</h2>
+                                    <h2>Os usuários já podem ver quem estará no evento, marcar encontros e, durante o evento, podem trocar cartões pela própria plataforma.</h2>
                                 </div> 
 
                                 <div>
                                     <img src="images/pie-chart-stats.svg" alt="">
-                                    <h2>Obtenha insides sobre o seu público e sobre o andamento do seu evento, obtendo feedback em tempo real.</h2>
+                                    <h2>Obtenha insights sobre o seu público e sobre o andamento do seu evento, obtendo feedback em tempo real.</h2>
                                 </div>
                             </section>
 
@@ -132,6 +132,35 @@
                         <p class="copyright">&copy; itStalk. Powered by: <a href="https://html5up.net">HTML5 UP</a>, <a href='https://br.freepik.com/vetores-gratis/reuniao-comercial-bem-sucedida-ou-entrevista-de-trabalho_1311606.htm'>Freepik</a> e <a href='https://www.flaticon.com'>Flaticon</a>.</p>
                     </footer>
 
+            </div>
+            
+        <!-- Modal: Formulário de contato -->
+            <div id="modal-contato-wrapper" class="modal hidden">
+                <div id="modal-contato-inner">
+                    <h2>Enviar mensagem</h2>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-4 col-12-xsmall">
+                                <input type="text" name="mensagem-autor" value="" placeholder="Nome" />
+                            </div>
+                            <div class="col-4 col-12-xsmall">
+                                <input type="email" name="mensagem-email" value="" placeholder="Email" />
+                            </div>
+                            <div class="col-4 col-12-xsmall">
+                                <input type="tel" name="mensagem-telefone" value="" placeholder="Telefone" />
+                            </div>
+                            <div class="col-12">
+                                <textarea name="demo-message" id="demo-message" placeholder="Escreva sua mensagem" rows="6"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Enviar Mensagem" class="primary confirmar" /></li>
+                                    <li><input type="reset" value="Cancelar" class="cancelar" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         <!-- Scripts -->
