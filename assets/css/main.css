@@ -3956,6 +3956,27 @@ input, select, textarea {
         }
         
     }
+
+	.quadros-time {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+		.quadros-time h1 {
+			margin-bottom: 0;
+		}
+		.quadros-time .links {
+			font-size: 1.5em;
+			display: flex;
+			justify-content: space-between;
+			width: 4em;
+		}
+		.quadros-time header {
+			margin-bottom: 0.5em;
+		}
+		.quadros-time > div {
+			width: 45%;
+		}
     
 
 /* Footer */
